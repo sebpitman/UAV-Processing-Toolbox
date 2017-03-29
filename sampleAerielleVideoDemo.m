@@ -24,9 +24,9 @@ inds = strfind(inputs.instsFn, filesep);
 if isempty(inds)
     eval(['insts = ' inputs.instsFn ';']);
 else
-    p = pwd; eval(['cd ' inputs.instsFn(1:inds(end))])
+    p = pwd; eval(['cd ' '''' inputs.instsFn(1:inds(end)) ''''])
     eval(['insts = ' inputs.instsFn(inds(end)+1:end) ';']);
-    eval(['cd ' p]); clear p
+    eval(['cd ' '''' p '''']); clear p
 end
 clear inds
 
